@@ -45,7 +45,7 @@ function collectCodeAndDeps(filepath: string) {
         // 然后转为项目路径
         const depProjectPath = getProjectPath(depAbsolutePath)
         // 把依赖写进 depRelation
-        item.deps.push(depAbsolutePath)
+        item.deps.push(depProjectPath)
         collectCodeAndDeps(depAbsolutePath)
       }
     }
